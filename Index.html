@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TITAN BGMI SERIES</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.92)),
+    radial-gradient(circle at top,#25344a,#050505 70%);
+  color:#fff;
+  padding:15px;
+}
+
+.container{
+  max-width:520px;
+  margin:auto;
+}
+
+.header{
+  text-align:center;
+  padding:18px 5px;
+}
+
+.logo{
+  font-size:13px;
+  letter-spacing:4px;
+  color:#aaa;
+}
+
+.header h1{
+  margin:7px 0;
+  font-size:31px;
+  font-weight:900;
+  color:#ffb300;
+  text-shadow:0 0 18px rgba(255,179,0,.4);
+}
+
+.header p{
+  color:#bbb;
+  font-size:14px;
+}
+
+.card{
+  background:rgba(18,18,18,.96);
+  border:1px solid #333;
+  border-radius:18px;
+  padding:19px;
+  margin-bottom:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.section-title{
+  color:#ffb300;
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.entry{
+  text-align:center;
+  border:1px solid #ffb300;
+  background:rgba(255,179,0,.07);
+}
+
+.entry small{
+  color:#bbb;
+}
+
+.entry .price{
+  font-size:35px;
+  color:#ffb300;
+  font-weight:900;
+  margin:5px 0;
+}
+
+/* PRIZE */
+.prizes{
+  display:grid;
+  gap:10px;
+}
+
+.prize{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:13px;
+  border-radius:12px;
+  background:#111;
+  border:1px solid #333;
+}
+
+.prize-left{
+  font-weight:bold;
+}
+
+.prize-right{
+  color:#ffb300;
+  font-weight:900;
+}
+
+.first{
+  border-color:#ffb300;
+}
+
+.second{
+  border-color:#888;
+}
+
+.third{
+  border-color:#9b6b3d;
+}
+
+label{
+  display:block;
+  color:#ccc;
+  font-size:14px;
+  margin:12px 0 6px;
+}
+
+input{
+  width:100%;
+  padding:13px;
+  border-radius:10px;
+  border:1px solid #444;
+  background:#0c0c0c;
+  color:white;
+  outline:none;
+  font-size:15px;
+}
+
+input:focus{
+  border-color:#ffb300;
+}
+
+.player{
+  padding-bottom:17px;
+  margin-bottom:17px;
+  border-bottom:1px solid #333;
+}
+
+.player:last-child{
+  border-bottom:0;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+.player-title{
+  font-weight:bold;
+  color:#fff;
+  margin-bottom:5px;
+}
+
+.upi{
+  padding:15px;
+  text-align:center;
+  background:#0c0c0c;
+  border:1px dashed #ffb300;
+  border-radius:12px;
+}
+
+.upi-id{
+  display:block;
+  margin-top:7px;
+  color:#ffb300;
+  font-weight:bold;
+  word-break:break-all;
+}
+
+button,
+.join-btn{
+  width:100%;
+  border:0;
+  border-radius:12px;
+  padding:14px;
+  margin-top:11px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.pay-btn{
+  background:#ffb300;
+  color:#111;
+}
+
+.submit-btn{
+  background:linear-gradient(135deg,#ffb300,#ff7800);
+  color:#111;
+  font-size:17px;
+}
+
+.join-btn{
+  display:none;
+  text-align:center;
+  text-decoration:none;
+  background:#25D366;
+  color:#fff;
+}
+
+.note{
+  color:#888;
+  font-size:12px;
+  line-height:1.5;
+  margin-top:8px;
+}
+
+.success{
+  display:none;
+  text-align:center;
+  margin-top:15px;
+  padding:15px;
+  border-radius:12px;
+  background:rgba(37,211,102,.08);
+  border:1px solid #25D366;
+}
+
+.success h3{
+  color:#25D366;
+  margin-bottom:6px;
+}
+
+footer{
+  text-align:center;
+  color:#666;
+  font-size:12px;
+  padding:8px;
+}
+
+@media(max-width:380px){
+  .header h1{
+    font-size:26px;
+  }
+
+  .card{
+    padding:15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo">🔥 ESPORTS TOURNAMENT 🔥</div>
+
+    <h1>TITAN BGMI SERIES</h1>
+
+    <p>Squad Tournament • Registration Open</p>
+  </div>
+
+
+  <!-- ENTRY FEE -->
+  <div class="card entry">
+
+    <small>SQUAD ENTRY FEE</small>
+
+    <div class="price">₹200</div>
+
+    <small>1 Squad = 4 Players</small>
+
+  </div>
+
+
+  <!-- PRIZE POOL -->
+  <div class="card">
+
+    <div class="section-title">
+      🏆 PRIZE POOL
+    </div>
+
+    <div class="prizes">
+
+      <div class="prize first">
+        <div class="prize-left">
+          🥇 1st Prize
+        </div>
+
+        <div class="prize-right">
+          Up to ₹900
+        </div>
+      </div>
+
+
+      <div class="prize second">
+        <div class="prize-left">
+          🥈 2nd Prize
+        </div>
+
+        <div class="prize-right">
+          Up to ₹400
+        </div>
+      </div>
+
+
+      <div class="prize third">
+        <div class="prize-left">
+          🥉 3rd Prize
+        </div>
+
+        <div class="prize-right">
+          Up to ₹200
+        </div>
+      </div>
+
+    </div>
+
+    <p class="note">
+      Prize amount is subject to tournament rules and conditions.
+    </p>
+
+  </div>
+
+
+  <form id="registrationForm">
+
+
+    <!-- TEAM -->
+    <div class="card">
+
+      <div class="section-title">
+        👑 TEAM DETAILS
+      </div>
+
+      <label>Team Name</label>
+
+      <input
+        type="text"
+        id="teamName"
+        placeholder="Enter Team Name"
+        required
+      >
+
+    </div>
+
+
+    <!-- PLAYERS -->
+    <div class="card">
+
+      <div class="section-title">
+        👥 PLAYER DETAILS
+      </div>
+
+
+      <!-- PLAYER 1 -->
+      <div class="player">
+
+        <div class="player-title">
+          Player 1
+        </div>
+
+        <label>Player Name</label>
+
+        <input
+          type="text"
+          id="player1"
+          placeholder="Enter Player 1 Name"
+          required
+        >
+
+        <label>BGMI UID</label>
+
+        <input
+          type="text"
+          id="uid1"
+          placeholder="Enter Player 1 UID"
+          required
+        >
+
+      </div>
+
+
+      <!-- PLAYER 2 -->
+      <div class="player">
+
+        <div class="player-title">
+          Player 2
+        </div>
+
+        <label>Player Name</label>
+
+        <input
+          type="text"
+          id="player2"
+          placeholder="Enter Player 2 Name"
+          required
+        >
+
+        <label>BGMI UID</label>
+
+        <input
+          type="text"
+          id="uid2"
+          placeholder="Enter Player 2 UID"
+          required
+        >
+
+      </div>
+
+
+      <!-- PLAYER 3 -->
+      <div class="player">
+
+        <div class="player-title">
+          Player 3
+        </div>
+
+        <label>Player Name</label>
+
+        <input
+          type="text"
+          id="player3"
+          placeholder="Enter Player 3 Name"
+          required
+        >
+
+        <label>BGMI UID</label>
+
+        <input
+          type="text"
+          id="uid3"
+          placeholder="Enter Player 3 UID"
+          required
+        >
+
+      </div>
+
+
+      <!-- PLAYER 4 -->
+      <div class="player">
+
+        <div class="player-title">
+          Player 4
+        </div>
+
+        <label>Player Name</label>
+
+        <input
+          type="text"
+          id="player4"
+          placeholder="Enter Player 4 Name"
+          required
+        >
+
+        <label>BGMI UID</label>
+
+        <input
+          type="text"
+          id="uid4"
+          placeholder="Enter Player 4 UID"
+          required
+        >
+
+      </div>
+
+    </div>
+
+
+    <!-- PAYMENT -->
+    <div class="card">
+
+      <div class="section-title">
+        💳 PAYMENT
+      </div>
+
+      <div class="upi">
+
+        <div>Pay Entry Fee</div>
+
+        <strong style="font-size:24px;">
+          ₹200
+        </strong>
+
+        <span class="upi-id" id="upiDisplay">
+          YOUR_UPI_ID@upi
+        </span>
+
+      </div>
+
+
+      <button
+        type="button"
+        class="pay-btn"
+        onclick="payNow()"
+      >
+        💰 PAY ₹200 VIA UPI
+      </button>
+
+
+      <label>
+        Payment Screenshot
+      </label>
+
+      <input
+        type="file"
+        id="paymentScreenshot"
+        accept="image/*"
+        required
+      >
+
+      <p class="note">
+        Payment केल्यानंतर screenshot upload करा.
+      </p>
+
+    </div>
+
+
+    <!-- SUBMIT -->
+    <div class="card">
+
+      <button
+        type="submit"
+        class="submit-btn"
+      >
+        🚀 SUBMIT REGISTRATION
+      </button>
+
+
+      <div
+        class="success"
+        id="successBox"
+      >
+
+        <h3>
+          🎉 Registration Submitted!
+        </h3>
+
+        <p>
+          तुमची registration process complete झाली.
+        </p>
+
+      </div>
+
+
+      <a
+        id="whatsappBtn"
+        class="join-btn"
+        href="https://chat.whatsapp.com/Hv6BjOIW7WnGPjJ1Po3PD3"
+        target="_blank"
+      >
+        📱 JOIN WHATSAPP GROUP
+      </a>
+
+    </div>
+
+  </form>
+
+
+  <footer>
+    © 2026 TITAN BGMI SERIES
+  </footer>
+
+</div>
+
+
+<script>
+
+/* =========================================
+   🔧 ADMIN SETTINGS
+   फक्त या दोन values बदलायच्या आहेत.
+   ========================================= */
+
+const UPI_ID = "YOUR_UPI_ID@upi";
+
+const WHATSAPP_LINK =
+"https://chat.whatsapp.com/Hv6BjOIW7WnGPjJ1Po3PD3";
+
+
+/* Show UPI ID */
+document.getElementById("upiDisplay").textContent = UPI_ID;
+
+
+/* =========================================
+   💰 UPI PAYMENT
+   ========================================= */
+
+function payNow(){
+
+  const upiURL =
+    "upi://pay" +
+    "?pa=" + encodeURIComponent(UPI_ID) +
+    "&pn=" + encodeURIComponent("TITAN BGMI SERIES") +
+    "&am=200" +
+    "&cu=INR";
+
+  window.location.href = upiURL;
+}
+
+
+/* =========================================
+   🚀 REGISTRATION
+   ========================================= */
+
+document
+.getElementById("registrationForm")
+.addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  const screenshot =
+    document.getElementById("paymentScreenshot").files[0];
+
+  if(!screenshot){
+
+    alert("Please upload payment screenshot.");
+
+    return;
+  }
+
+
+  /* Show success */
+
+  document.getElementById("successBox")
+  .style.display = "block";
+
+
+  /* Show WhatsApp button */
+
+  const whatsapp =
+    document.getElementById("whatsappBtn");
+
+  whatsapp.style.display = "block";
+
+  whatsapp.href = WHATSAPP_LINK;
+
+
+  /* Registration data */
+
+  const data = {
+
+    teamName:
+      document.getElementById("teamName").value,
+
+    players: [
+
+      {
+        name:
+          document.getElementById("player1").value,
+
+        uid:
+          document.getElementById("uid1").value
+      },
+
+      {
+        name:
+          document.getElementById("player2").value,
+
+        uid:
+          document.getElementById("uid2").value
+      },
+
+      {
+        name:
+          document.getElementById("player3").value,
+
+        uid:
+          document.getElementById("uid3").value
+      },
+
+      {
+        name:
+          document.getElementById("player4").value,
+
+        uid:
+          document.getElementById("uid4").value
+      }
+
+    ],
+
+    paymentScreenshot:
+      screenshot.name,
+
+    entryFee: 200
+
+  };
+
+
+  console.log(
+    "TITAN BGMI SERIES:",
+    data
+  );
+
+
+  alert(
+    "Registration Submitted! 🎉\n\n" +
+    "आता WhatsApp Group Join करा."
+  );
+
+
+  /* Open WhatsApp */
+
+  window.open(
+    WHATSAPP_LINK,
+    "_blank"
+  );
+
+});
+
+</script>
+
+</body>
+</html>
